@@ -1,15 +1,11 @@
 def contains_digits(number, digits):
-    result = False
+    result = True
     number = str(number)
-    digits = str(digits)
 
-    for itr in range(0, len(number)):
-        for iter in range(0, len(digits)):
-            if number[itr] != digits[iter]:
-                result = False
-            elif number[itr] == digits[iter]:
-                result = True
-                break
+    for itr in digits:
+        if (number.count(str(itr)) == 0):
+            result = False
+            break
 
     return result
 
