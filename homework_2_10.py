@@ -11,4 +11,3 @@ def what_is_my_sign(day, month):
     return result
 
 print(what_is_my_sign(26, 4))
-    
