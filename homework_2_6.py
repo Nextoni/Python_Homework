@@ -3,10 +3,10 @@ def contains_digits(number, digits):
     number = str(number)
 
     for itr in digits:
-        if (number.count(str(itr)) == 0):
+        if (number.__contains__(str(itr)) == False):
             result = False
             break
 
     return result
 
-print(contains_digits(123, [1, 2, 3]))
+print(contains_digits(123, [1, 2, 3, 4]))
