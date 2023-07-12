@@ -1,22 +1,14 @@
 def calculate_coins(sum):
-    coins = [1, 0.50, 0.20, 0.10, 0.05, 0.02, 0.01]
+    coins = [100, 50, 20, 10, 5, 2, 1]
     result = 0
-    result_before = 0
-    string_result = []
+    result1 = {"100":0, "50":0, "20":0, "10":0, "5":0, "2":0, "1":0}
+    sum = sum * 100
 
-    for coin in range(len(coins)):
-        for itr in range(len(coins)):
-            if result < sum:
-                result_before = result
-                result += coins[coin]
-                
+    for coin in coins:
+        while result + coin <= sum:
+            result += coin
+            result1[str(coin)] += 1
 
-            elif result > sum:
-                result = result_before
-
-            else:
-                break
-    
-    return result
+    return result1
 
 print(calculate_coins(5.6))
