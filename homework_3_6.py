@@ -6,7 +6,6 @@ def gas_station(distance, tank_size, stations):
     for st in range(len(stations)):
         if tank_size < stations[st] and tank_size < distance and tank_size_temp == tank_size:
             tank_size_temp = stations[st - 1] + tank_size
-            print(tank_size_temp)
             temp = stations[st - 1]
             result.append(temp)
 
