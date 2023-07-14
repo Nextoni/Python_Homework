@@ -79,7 +79,6 @@ def numbers_to_msg(num):
 
     return result
 
-
 print(numbers_to_msg([6, 2, 7, 7, 7, 4, 4, 4, 9, 9, 9, 2, 6, 6]))
 
 def nokia_text(digits):
