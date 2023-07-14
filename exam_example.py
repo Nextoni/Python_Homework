@@ -10,7 +10,7 @@ def img_rotate(arr):
 
 print(img_rotate([[1, 0, 1], [0, 1, 1], [1, 0, 0]]))
 '''
-'''
+
 def group(arr):
     result = []
     temp = []
@@ -30,6 +30,7 @@ def group(arr):
     
     return result
 
+'''
 def nokia_text(digits):
     chars = {0:' ', 2:'abc', 3:'def', 4:'ghi', 5:'jkl', 6:'mno', 7:'pqrs', 8:'tuv', 9:'wxyz'}
     result = ""
@@ -79,4 +80,25 @@ def numbers_to_msg(num):
     return result
 
 
-print(numbers_to_msg([7, 7, 7, 8, 8, 2, 2, 9, 9, 9]))
+print(numbers_to_msg([6, 2, 7, 7, 7, 4, 4, 4, 9, 9, 9, 2, 6, 6]))
+
+def nokia_text(digits):
+    chars = {0:' ', 2:'abc', 3:'def', 4:'ghi', 5:'jkl', 6:'mno', 7:'pqrs', 8:'tuv', 9:'wxyz'}
+    result = ""
+    digits = str(digits)
+    temp = []
+
+    for iter in digits:
+        temp.append(int(iter))
+    
+    temp = group(temp)
+
+    result1 = ''
+
+    for sub_group in temp:
+        char_pos = len(sub_group) % len(chars[sub_group[0]]) - 1
+        result = result + chars[sub_group[0]][char_pos]
+
+    return result
+
+print(nokia_text(62777444999266))
