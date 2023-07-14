@@ -18,4 +18,4 @@ def to_number1(digits):
         result = result + str(nums)
     result = int(result)
     return result
-print(to_number1([25, 3, 9]))
+print(to_number1([25, 32, 95]))

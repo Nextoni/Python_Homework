@@ -1,5 +1,5 @@
 def fib_number(n):
-    n1 = 0
+    n1 = 1
     n2 = 1
     result = ""
 
@@ -12,4 +12,3 @@ def fib_number(n):
     return int(result)
 
 print(fib_number(6))
-    
